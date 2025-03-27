@@ -31,7 +31,7 @@ if (isset($_POST['criar-conta'])) {
         redirecionarComErro("A senha deve ter pelo menos 8 caracteres, incluindo uma letra maiúscula, uma minúscula, um número e um caractere especial.");
     }
 
-    $sql = "SELECT * FROM usuarios WHERE email = '$email'";
+    $sql = "SELECT * FROM usuario WHERE email = '$email'";
     $result = mysqli_query($conexao, $sql);
 
     if (mysqli_num_rows($result) > 0) {
@@ -40,7 +40,7 @@ if (isset($_POST['criar-conta'])) {
 
     $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
 
-    $insertSql = "INSERT INTO usuarios (email, senha) VALUES ('$email', '$hashedPassword')";
+    $insertSql = "INSERT INTO usuario (email, senha) VALUES ('$email', '$hashedPassword')";
     if (mysqli_query($conexao, $insertSql)) {
         $_SESSION['sucesso'] = "Cadastro realizado com sucesso!";
         header("Location: index.php");
@@ -54,7 +54,7 @@ if (isset($_POST['login'])) {
     $email = mysqli_real_escape_string($conexao, trim($_POST['email']));
     $password = mysqli_real_escape_string($conexao, trim($_POST['password']));
 
-    $sql = "SELECT * FROM usuarios WHERE email = '$email'";
+    $sql = "SELECT * FROM usuario WHERE email = '$email'";
     $result = mysqli_query($conexao, $sql);
 
     if (mysqli_num_rows($result) > 0) {
