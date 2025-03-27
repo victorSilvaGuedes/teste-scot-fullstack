@@ -1,0 +1,48 @@
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	background-color: #295d2e;
+	flex-direction: row;
+}
+
+.login-container {
+	width: 100%;
+	max-width: 400px;
+	padding: 50px;
+	background: white;
+	box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
+		rgba(0, 0, 0, 0.22) 0px 10px 10px;
+	border-radius: 8px;
+}
+
+.toast-login {
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	margin: 20px;
+}
+
+input.form-control {
+	background-color: transparent;
+	border: none;
+	border-bottom: 2px solid #e8a449;
+	color: black;
+	height: 40px;
+	padding: 0.375rem 0.75rem;
+	border-radius: 0;
+	outline: none;
+}
+
+input.form-control:focus {
+	background-color: transparent;
+	border-bottom: 2px solid #c88232;
+	color: black;
+	box-shadow: none;
+}
+
+input.form-control::placeholder {
+	color: black;
+	opacity: 0.7;
+}
