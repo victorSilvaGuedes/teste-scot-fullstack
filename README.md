@@ -100,5 +100,6 @@ php -S 127.0.0.1:8000
 Abra o navegador e vá para http://127.0.0.1:8000
 
 ### Vídeo demonstrativo
+Ao clicar no link, o vídeo será baixado.
 
 [🎥 Assista ao vídeo](https://github.com/victorSilvaGuedes/teste-scot-back-end/raw/main/demo-teste-backend-scot.mp4)
