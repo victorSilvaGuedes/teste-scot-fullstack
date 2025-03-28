@@ -72,7 +72,13 @@ php --ini
 ```
 
 Para ver o arquivo de configuração.
-No meu caso: C:\php\php.ini
+
+No meu caso:
+
+```sh
+C:\php\php.ini
+```
+
 Abra o arquivo de configuração, procure se a linha ";extension=mysqli" está presente.
 Se estiver, remova o ponto e vírgula e salve o arquivo.
 Para confimar se deu certo, execute o comando no terminal:
@@ -81,7 +87,13 @@ Para confimar se deu certo, execute o comando no terminal:
 php -m | findstr /I "mysqli"
 ```
 
-Se retornar "mysqli", significa que a extensão está ativada.
+Se retornar:
+
+```sh
+mysqli
+```
+
+Significa que a extensão está ativada.
 
 ### 5. Iniciar servidor PHP
 
@@ -95,6 +107,10 @@ php -S 127.0.0.1:8000
 
 Abra o navegador e vá para http://127.0.0.1:8000
 
+---
+
 ### Vídeo demonstrativo
 
-[🎥 Assista ao vídeo](https://github.com/victorSilvaGuedes/teste-scot-back-end/raw/main/demo-teste-backend-scot.mp4)
+Ao clicar no link, o vídeo será baixado.
+
+[🎥 Assista ao vídeo](https://github.com/victorSilvaGuedes/teste-scot-fullstack/raw/main/demo-teste-fullstack-scot.mp4)
