@@ -72,9 +72,13 @@ php --ini
 ```
 
 Para ver o arquivo de configuração.
+
 No meu caso: C:\php\php.ini
+
 Abra o arquivo de configuração, procure se a linha ";extension=mysqli" está presente.
+
 Se estiver, remova o ponto e vírgula e salve o arquivo.
+
 Para confimar se deu certo, execute o comando no terminal:
 
 ```sh
