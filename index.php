@@ -42,7 +42,7 @@ unset($_SESSION['sucesso']);
                 <div class="alert alert-success alert-dismissible fade show" role="alert">
                     <?= $sucesso ?>
                     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                    </div>
+                </div>
             <?php endif; ?>
             <button type="submit" name="login" class="btn w-100 btn-primary">Entrar</button>
         </form>

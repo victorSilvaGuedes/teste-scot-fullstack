@@ -41,33 +41,47 @@ Se o código já estiver disponível, copie os arquivos para a pasta do projeto.
 CREATE DATABASE usuarios;
 ```
 
+Após isso, criar a tabela:
+
+```sql
+CREATE TABLE usuario (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    email VARCHAR(100) NOT NULL,
+    senha VARCHAR(255) NOT NULL
+);
+```
+
 ### 3. Configurar a Conexão com o Banco de Dados
 
 No arquivo conexao.php, edite as credenciais de conexão se necessário:
 
 ```php
-if (!defined('HOST')) {
-  define('HOST', 'localhost');
-}
-
-if (!defined('USER')) {
-  define('USER', 'seu_usuario');
-}
-
-if (!defined('PASSWORD')) {
-  define('PASSWORD', 'sua_senha');
-}
-
-if (!defined('DATABASE')) {
-  define('DATABASE', 'usuarios');
-}
+define('HOST', 'localhost');
+define('USER', 'seu_usuario');
+define('PASSWORD', 'sua_senha');
+define('DATABASE', 'usuarios');
 ```
 
-### 4. Configurar o Banco de Dados (extensão mysqli)
+### 4. Configurar arquivo PHP (extensão mysqli)
 
-É necessário configurar o arquivo do MySQL em php.ini (ou em seu arquivo de configuração do PHP) para que a extensão mysqli esteja ativada.
-No arquivo arquivo de configuração (que pode ser visualizado com o comando "php --ini" no terminal), verifique se a linha: ";extension=mysqli
-" está com o ponto-e-vírgula. Se estiver, remova-a e salve o arquivo.
+É necessário alterar o arquivo de configuração do PHP para que a extensão "mysqli" seja ativada.
+No terminal digite o comando:
+
+```sh
+php --ini
+```
+
+Para ver o arquivo de configuração.
+No meu caso: C:\php\php.ini
+Abra o arquivo de configuração, procure se a linha ";extension=mysqli" está presente.
+Se estiver, remova o ponto e vírgula e salve o arquivo.
+Para confimar se deu certo, execute o comando no terminal:
+
+```sh
+php -m | findstr /I "mysqli"
+```
+
+Se retornar "mysqli", significa que a extensão está ativada.
 
 ### 5. Iniciar servidor PHP
 
@@ -76,6 +90,10 @@ No terminal do VS Code (ou terminal do sistema operacional), dentro do diretóri
 ```sh
 php -S 127.0.0.1:8000
 ```
+
+### 6. Acessar aplicação
+
+Abra o navegador e vá para http://127.0.0.1:8000
 
 ### Vídeo demonstrativo
 
