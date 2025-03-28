@@ -85,7 +85,7 @@ No meu caso:
 C:\php\php.ini
 ```
 
-Abra o arquivo de configuração, procure se a linha ";extension=mysqli" está presente.
+Abra o arquivo de configuração no bloco de notas, procure se a linha **";extension=mysqli"** está presente.
 
 Se estiver, remova o ponto e vírgula e salve o arquivo.
 
